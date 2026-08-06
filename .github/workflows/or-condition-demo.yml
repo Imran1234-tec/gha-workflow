@@ -1,0 +1,15 @@
+name: or condition demo
+on: 
+  push:
+    branches:
+      - main
+      - release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run this step if imran or devopsfilks running this job
+        if: github.actor == 'Imran1234-tec' || github.actor == 'devopsfolks'
+        run: echo "Running the job from imran or devopsfolks"
+    
