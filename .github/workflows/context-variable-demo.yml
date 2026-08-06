@@ -10,5 +10,10 @@ jobs:
          echo "This action is run by branch ${{ github.repository }}"
          echo "This is triggerd from branch ${{ github.ref_name }}"
          
+     - name: Print all variables under github
+       run: echo "${{ toJson(github) }}"
+
+      
+         
        
          
