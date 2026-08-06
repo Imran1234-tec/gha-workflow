@@ -5,5 +5,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: use context variable 
-       run: echo "This workflow is triggered by ${{ github.actor }}"
+       run: |
+         echo "This workflow is triggered by ${{ github.actor }}"
+         echo "This action is run by branch ${{ github.repository }}"
+         
+       
          
