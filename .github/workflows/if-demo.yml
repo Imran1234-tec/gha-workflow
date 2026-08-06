@@ -1,0 +1,16 @@
+name: if condition demo
+on: 
+  push:
+    branches:
+     - main
+     - feature
+jobs:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: run this build if main branch
+       if: github.ref_name == 'refs/heads/main'
+       run: "This is main branch"
+
+     - name: run this step
+       run: "This step is running with condition"
