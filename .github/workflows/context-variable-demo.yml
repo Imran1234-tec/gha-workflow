@@ -8,6 +8,7 @@ jobs:
        run: |
          echo "This workflow is triggered by ${{ github.actor }}"
          echo "This action is run by branch ${{ github.repository }}"
+         echo "This is triggerd from branch ${{ github.ref_name }}"
          
        
          
